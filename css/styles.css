@@ -177,7 +177,13 @@ img {
   text-align: center;
   padding-bottom: 200px;
   padding-top: 200px;
+
   background-color: var(--page-footer-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .main {
   color: #fff;
@@ -210,7 +216,7 @@ img {
 
 /* ОСОБЕННОСТИ */
 
-.features {
+.features-head {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -253,6 +259,7 @@ img {
 }
 .list.heading {
   margin-left: -30px;
+  margin-bottom: 0;
 }
 .item-heading {
   width: 370px;
@@ -385,4 +392,61 @@ img {
 }
 /* .container {
   outline: 1px solid green;
+} */
+
+/* ПСЕВДОЭЛЕМЕНТЫ */
+
+.list.address .link::before {
+  content: "";
+  display: inline-block;
+  background-size: cover;
+  justify-content: center;
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  background-position: center;
+  /* background-size: cover; */
+  background-image: url(../images/icon/mail.svg);
+  /* background-color: #e01616; */
+}
+.list.address .link:nth-child(2)::before {
+  background-color: blueviolet;
+}
+
+.item-features::before {
+  content: "";
+  height: 120px;
+  display: block;
+  margin-bottom: 30px;
+  background-color: #e01616;
+}
+
+.item-features:nth-child(2)::before {
+  background-color: rgb(49, 109, 89);
+}
+.item-features:nth-child(3)::before {
+  background-color: rgb(30, 38, 156);
+}
+.item-features:nth-child(4)::before {
+  background-color: aquamarine;
+}
+
+.item-team::after {
+  content: "";
+  height: 44px;
+  display: block;
+  margin-bottom: 30px;
+  background-image: url(../images/img-box1.jpg);
+  background-color: #753232;
+}
+/* 
+.item-team:nth-child(2)::after {
+  background-image: url(../images/img-box2.jpg);
+  background-color: rgb(29, 209, 23);
+}
+.item-team:nth-child(3)::after {
+  background-color: rgb(66, 21, 172);
+}
+.item-team:nth-child(4)::after {
+  background-color: rgb(183, 199, 43);
 } */
