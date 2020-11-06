@@ -27,6 +27,10 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+img {
+  display: block;
+}
 .list {
   list-style: none;
   margin: 0;
@@ -50,7 +54,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
 
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .list.features,
 .list.heading,
@@ -332,9 +336,10 @@ p {
 .list.portfolio .item-portfolio + .item-portfolio {
   margin-left: 8px;
 }
-/* .item-content img {
-  margin-bottom: 20px;
-} */
+.item-content img {
+  width: 370px;
+  text-align: center;
+}
 .list.content {
   flex-wrap: wrap;
   margin-right: -30px;
@@ -344,8 +349,10 @@ p {
   margin-right: 30px;
 
   margin-bottom: 30px;
-
+}
+.text-content {
   border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
 .item-content:nth-child(3n) {
   margin-right: 0;
@@ -361,8 +368,6 @@ p {
   letter-spacing: 0.06em;
 
   margin-bottom: 4px;
-  /* padding-left: 24px; */
-  /* padding-top: 20px; */
 }
 .categories {
   color: var(--secondary-text-color);
@@ -370,14 +375,6 @@ p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-
-  /* padding-left: 24px;
-  padding-bottom: 20px; */
-}
-.text-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
 }
 .link-content {
   text-decoration: none;
@@ -386,7 +383,6 @@ p {
 .item-content:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-.container {
+/* .container {
   outline: 1px solid green;
-}
+} */
