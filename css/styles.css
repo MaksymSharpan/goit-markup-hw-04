@@ -60,9 +60,10 @@ img {
 .list.heading,
 .list.team,
 .list.portfolio,
-.list.content {
+.list.content,
+.list.clients,
+.list.address.up {
   display: flex;
-
   align-items: center;
 }
 
@@ -80,6 +81,7 @@ img {
   color: #2196f3;
 }
 /* ШАПКА */
+
 .link-page {
   font-weight: 500;
   font-size: 14px;
@@ -117,58 +119,22 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-/* ФУТЕР */
+/* ИКОНКИ В ШАПКЕ */
 
-.footer-page {
-  background-color: var(--page-footer-color);
-}
+.link-contacts.up {
+  display: inline-flex;
+  align-items: center;
 
-.logo.down {
-  color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  fill: var(--secondary-text-color);
 }
-.container.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.link-contacts.up:hover {
+  fill: var(--accent-color);
 }
-.logo-footer {
-  margin-bottom: 20px;
-}
-.link-contacts.down {
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-}
-.link-down {
-  margin-bottom: 9px;
-  font-style: normal;
-}
-.link-contacts.address {
-  color: #ffffff;
-}
-.link-contacts.address:hover,
-.link-contacts.address:focus {
-  color: var(--accent-color);
-}
-.list.nav {
-  display: flex;
-}
-.list.address {
-  display: flex;
-}
-.navigation {
-  display: flex;
-  align-items: center;
-}
-.container.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.list.nav .link + .link {
-  margin-left: 50px;
-}
-.list.address .link + .link {
-  margin-left: 50px;
+.icon-address {
+  margin-right: 10px;
 }
 
 /* HERO */
@@ -244,6 +210,30 @@ img {
   flex-basis: calc(100% / 4 - 30px);
 }
 
+/* ПСЕВДОЭЛЕМЕНТЫ */
+
+.item-features::before {
+  content: "";
+  height: 120px;
+  display: block;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-image: url(../images/icon/Vector.svg);
+}
+.item-features:nth-child(2)::before {
+  background-image: url(../images/icon/clock\ .svg);
+}
+.item-features:nth-child(3)::before {
+  background-image: url(../images/icon/Vector\ 3.svg);
+}
+.item-features:nth-child(4)::before {
+  background-image: url(../images/icon/astronaut\ .svg);
+}
+
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
 
 .section.features {
@@ -286,18 +276,11 @@ img {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-
-  /* margin-bottom: 30px; */
 }
-/* .item-team img {
-  padding-bottom: 30px;
-} */
-
 .work-div {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
 .list.team {
   margin-right: -30px;
   text-align: center;
@@ -311,6 +294,34 @@ img {
 }
 .item-team:nth-child(4n) {
   margin-right: 0;
+}
+
+/* CСЫЛКИ НА СОЦ СЕТИ */
+
+.list.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.list.social li {
+  width: 44px;
+  height: 44px;
+}
+.list.social li + li {
+  margin-left: 10px;
+}
+.link-social {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+}
+.link-social:hover {
+  background-color: var(--accent-color);
+  fill: #fff;
 }
 
 /* ПОРТФОЛИО */
@@ -394,59 +405,108 @@ img {
   outline: 1px solid green;
 } */
 
-/* ПСЕВДОЭЛЕМЕНТЫ */
+/* ПОСТОЯННЫЕ КЛИЕНТЫ */
 
-.list.address .link::before {
-  content: "";
-  display: inline-block;
-  background-size: cover;
+.list.clients {
+  align-items: center;
   justify-content: center;
-  height: 12px;
-  width: 16px;
-  margin-right: 10px;
-  background-position: center;
-  /* background-size: cover; */
-  background-image: url(../images/icon/mail.svg);
-  /* background-color: #e01616; */
-}
-.list.address .link:nth-child(2)::before {
-  background-color: blueviolet;
 }
 
-.item-features::before {
-  content: "";
-  height: 120px;
-  display: block;
-  margin-bottom: 30px;
-  background-color: #e01616;
-}
+.link-clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.item-features:nth-child(2)::before {
-  background-color: rgb(49, 109, 89);
-}
-.item-features:nth-child(3)::before {
-  background-color: rgb(30, 38, 156);
-}
-.item-features:nth-child(4)::before {
-  background-color: aquamarine;
-}
+  width: 170px;
+  height: 90px;
 
-.item-team::after {
-  content: "";
-  height: 44px;
-  display: block;
-  margin-bottom: 30px;
-  background-image: url(../images/img-box1.jpg);
-  background-color: #753232;
+  fill: #afb1b8;
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
-/* 
-.item-team:nth-child(2)::after {
-  background-image: url(../images/img-box2.jpg);
-  background-color: rgb(29, 209, 23);
+.link-clients:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
-.item-team:nth-child(3)::after {
-  background-color: rgb(66, 21, 172);
-}
-.item-team:nth-child(4)::after {
-  background-color: rgb(183, 199, 43);
+/* .item-clients {
+  width: calc(100% - 30px / 6);
 } */
+.item-clients:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ФУТЕР */
+
+.footer-page {
+  background-color: var(--page-footer-color);
+}
+.logo.down {
+  color: #ffffff;
+}
+.container.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo-footer {
+  margin-bottom: 20px;
+}
+.link-contacts.down {
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.link-down {
+  margin-bottom: 9px;
+  font-style: normal;
+}
+.link-contacts.address {
+  color: #ffffff;
+}
+.link-contacts.address:hover,
+.link-contacts.address:focus {
+  color: var(--accent-color);
+}
+.list.nav,
+.list.address,
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.container.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list.nav .link + .link {
+  margin-left: 50px;
+}
+.list.address .link + .link {
+  margin-left: 50px;
+}
+
+/* ФУТЕР ФЛЕКС */
+
+.container.footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.social-footer {
+  margin-left: 70px;
+}
+.social-footer h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.list.social.footer {
+  margin-top: 0;
+}
+.link-social.footer {
+  fill: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.link-social.footer:hover {
+  background-color: var(--accent-color);
+}
